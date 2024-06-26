@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">"
+    <meta http-equiv="X=UA-Compatible" content="ie=edge">
+    <title>FruitCiun</title>
+    <style>
+        @font-face {
+        font-family: "Uni";
+        src: url("fonts/Uni_Sans_Thin.otf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body { 
+            font-family: 'Uni', sans-serif;
+            background:  #363538;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            
+        }
+
+        #main {
+            display: display;
+            position: absolute;
+            z-index: 1;
+            flex-direction: column;
+            max-width: 500px;
+            max-height: 750px;
+            width: 500px;
+            height: 750px;
+            background: #221a30;
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0 0 20px #7939e0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #caa2eb;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 1s;
+            animation: pulse 1s ease-in-out infinite alternate;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 100%;
+            }   
+             100% {
+                opacity: 45%;
+            }
+        }
+
+
+
+        img { 
+            width: 256px;
+            height: 256px;
+            margin: 30% auto;
+            display: block;
+            
+        }
+
+        button {
+            outline: none;
+            border: none;
+            padding: 20px;
+            border-radius: 60px;
+            display: block;
+            margin: -50px auto;
+            width: 200px;
+            font-size: 1.3em;
+            box-shadow: 0 10px 0 #5d9fd4;
+            transition: all 0.3s;
+        }
+        
+        button:disabled {
+            opacity: 70%;
+            cursor: not-allowed;
+            box-shadow: 0 10px 0 #0ea75b2c;
+        }
+
+        button:hover {
+            box-shadow: 0 7px 0 #d6abf8;
+            transform: translateY(3px);
+        }
+
+        #form { 
+            display: none;
+            position: absolute;
+            z-index: 1;
+            flex-direction: column;
+            max-width: 500px;
+            max-height: 750px;
+            width: 500px;
+            height: 750px;
+            background: #221a30;
+            border-radius: 30px;
+            padding: 90px;
+            box-shadow: 0 0 30px #7939e0;
+            text-align: center;
+  
+        }
+
+        input {
+            width: 90%;
+            outline: none;
+            margin: 8px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: solid rgb(146, 111, 160);
+            border-radius: 10px;
+            
+        }
+
+        input:focus {
+            border-color: #504eb6bb;
+        }
+
+
+     
+
+        @keyframes animate {
+            0% {
+                transform: translateY(100vh) scale(0);
+            }
+             100% {
+                transform: translateY(-10vh) scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Fruit Coin</h1>
+        <img src="../static/images/Fruit15.png">
+        <button id="buy">Secret Character</button>
+    </div>
+    <from id="form">
+        <input type="text" placeholder="Фрукт" id="user_name">
+        <input type="text" placeholder="Свойство" id="user_properties">
+        <img src="../static/images/Fruit15.png">
+        <button id="check">Проверить</button>
+    </from>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let check = document.getElementById("check");
+
+        buy.addEventListener("click", ()=>{
+            document.getElementById("maim").style.display = "none";
+            document.getElementById("form").style.display = "display";
+        });
+
+        order.addEventListener("click",()=>{ });
+
+        
+    
+    </script>
+</body>
+</html>
+
+
